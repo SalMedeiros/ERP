@@ -1,5 +1,6 @@
 // controllers/auth.controller.js
 const prisma = require('../services/prisma');
+const generateToken = require('../utils/generateToken');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
