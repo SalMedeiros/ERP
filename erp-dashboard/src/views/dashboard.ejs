@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <%- include('layouts/main.ejs') %>
+    <div class="dashboard-container">
+        <h1>Dashboard</h1>
+        <div class="stats">
+            <div class="stat-item">
+                <h2>Total Users</h2>
+                <p><%= totalUsers %></p>
+            </div>
+            <div class="stat-item">
+                <h2>Total Permissions</h2>
+                <p><%= totalPermissions %></p>
+            </div>
+            <div class="stat-item">
+                <h2>Active Sessions</h2>
+                <p><%= activeSessions %></p>
+            </div>
+        </div>
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <% recentActivities.forEach(activity => { %>
+                    <li><%= activity %></li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
